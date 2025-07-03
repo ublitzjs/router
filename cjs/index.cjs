@@ -60,7 +60,7 @@ function dynamicallyCreateNewHandler(server, route) {
 }
 
 var specMethods = new Set(["any", "ws"]);
-
+var changeAjv = (jv) => (ajv = jv);
 class AbstractRouter {
   constructor(paths) {
     this.paths = paths;
@@ -136,4 +136,4 @@ class HeavyController extends LightController {
     this.parseBody = opts.parseBody;
   }
 }
-export { HeavyController, LightController, Router, ExtendedRouter };
+export { HeavyController, LightController, Router, ExtendedRouter, changeAjv };

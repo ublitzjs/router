@@ -6,6 +6,7 @@ import type {
   DocumentedWSBehavior,
 } from "@ublitzjs/core";
 import type { HeavyController, LightController } from "./controllers";
+import type Ajv from "ajv";
 declare abstract class AbstractRouter<
   Paths extends RouterPaths | extPaths<{}, {}>
 > {
@@ -111,5 +112,5 @@ export type extPaths<methodAddOns, routeAddOns> = Record<
   /*route*/ string,
   Partial<extendedHttpRouteI<routeAddOns, methodAddOns>>
 >;
-
+export function changeAjv(jv: Ajv): unknown;
 export * from "./controllers";
