@@ -47,8 +47,10 @@ declare abstract class AbstractRouter<
  * This class lets you register endpoints like in openapi. Look into examples.
  */
 export class Router<Paths extends RouterPaths> extends AbstractRouter<Paths> {}
-
-type defineCB = (path: string, methods: any[]) => any;
+/**
+ * this is the interface of function, you pass in ExtendedRouter as a plugin. It is called on each "define" call, so when using "this" keyword you are refering to ExtendedRouter on defining route stage
+ */
+type defineCB = (this: ExtendedRouter<any>, methods: any[]) => any;
 /**
  * Same as Router, but "extended". You can combine it with @ublitzjs/openapi or write own plugins extensions for this. But extensions !== middlewares. They are mainly needed in development and used once while registrating routes.
  */
