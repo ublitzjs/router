@@ -1,6 +1,6 @@
 {
   "name": "@ublitzjs/router",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "dependencies": {
     "@ublitzjs/core": "~0.0.1",
     "@ublitzjs/payload": "~0.0.1",
