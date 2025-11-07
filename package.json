@@ -1,11 +1,11 @@
 {
   "name": "@ublitzjs/router",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "dependencies": {
-    "@ublitzjs/core": "~0.0.1",
+    "@sinclair/typebox": "^0.34.33",
+    "@ublitzjs/core": "^0.1.1",
     "@ublitzjs/payload": "~0.0.1",
-    "ajv": "8.17.1",
-    "@sinclair/typebox": "^0.34.33"
+    "ajv": "8.17.1"
   },
   "exports": {
     ".": {
@@ -39,5 +39,9 @@
     "code structure",
     "development",
     "openapi-like"
-  ]
+  ],
+  "devDependencies": {
+    "@types/node": "^24.10.0",
+    "@ublitzjs/logger": "^0.0.2"
+  }
 }
