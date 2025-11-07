@@ -1,6 +1,6 @@
 {
   "name": "@ublitzjs/router",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "dependencies": {
     "@sinclair/typebox": "^0.34.33",
     "@ublitzjs/core": "^0.1.1",
