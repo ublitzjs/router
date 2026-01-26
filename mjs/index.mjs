@@ -101,7 +101,7 @@ class AbstractRouter {
     var route = this.paths[path];
     this._currentPath = path;
     this.registerMostMethods(route, methods);
-    if (methods.includes("ws")) this.server.ws(this.prefixedPath, route.ws);
+    if (methods.includes("ws")) this.server.ws(this.prefixedPath, route.ws.controller ? route.ws.controller : route.ws);
     this.registerAnyMethod(route, methods);
     return this;
   }
